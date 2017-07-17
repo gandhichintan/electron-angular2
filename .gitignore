@@ -200,3 +200,9 @@ ModelManifest.xml
 /Pommtree.Web/src/**/*.css
 /Pommtree.API/Content/markers
 *.DotSettings
+
+#typescript compiled files
+/app/**/*.map
+/app/**/*.js
+*.map
+*.js

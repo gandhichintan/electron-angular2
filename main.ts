@@ -1,9 +1,10 @@
-"use strict";
-const electron = require("electron");
+import electron = require("electron");
 let app = electron.app;
 let BrowserWindow = electron.BrowserWindow;
+
 // Global reference to the main window, so the garbage collector doesn't close it.
-let mainWindow;
+let mainWindow : Electron.BrowserWindow;
+
 // Opens the main window, with a native menu bar.
 function createWindow() {
     // Create the browser window.
@@ -14,10 +15,13 @@ function createWindow() {
         height: 768,
         frame: true
     });
+
     // and load the index.html of the app.
     mainWindow.loadURL(`file://${__dirname}/index.html`);
+
     // Open the DevTools.
     // mainWindow.webContents.openDevTools();
+
     // Emitted when the window is closed.
     mainWindow.on("closed", () => {
         // Dereference the window object, usually you would store windows
@@ -26,17 +30,20 @@ function createWindow() {
         mainWindow = null;
     });
 }
+
 // Call 'createWindow()' on startup.
 app.on("ready", () => {
     createWindow();
 });
+
 // On OS X it is common for applications and their menu bar to stay active until the user quits explicitly
 // with Cmd + Q.
 app.on("window-all-closed", () => {
     if (process.platform !== "darwin") {
-        app.quit();
+        app.quit()
     }
 });
+
 // On OS X it's common to re-create a window in the app when the dock icon is clicked and there are no other
 // windows open.
 app.on("activate", () => {
@@ -44,4 +51,3 @@ app.on("activate", () => {
         createWindow();
     }
 });
-//# sourceMappingURL=main.js.map
