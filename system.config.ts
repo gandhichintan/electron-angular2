@@ -21,6 +21,7 @@ System.config({
         '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
         '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
         '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
+        '@angular/material' : 'npm@angular/material/material.umd.js',
         // other libraries
         'rxjs': 'npm:rxjs',
     },

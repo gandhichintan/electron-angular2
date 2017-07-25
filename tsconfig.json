@@ -1,25 +1,26 @@
 {
-    "compilerOptions": {
-        "declaration": false,
-        "target": "es6",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "removeComments": false,
-        "noImplicitAny": false,
-        "noEmitOnError": true
-    },
-    "typeRoots": [
-        "../node_modules/@types"
-    ],
-    "types": [
-        "core-js"
-    ],
-    "exclude": [
-        "node_modules",
-        "node_modules/@typings",
-        "typings"
-    ]
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false
+  },
+  "compileOnSave": true,
+  "typeRoots": [
+    "node_modules",
+    "typings"
+  ],
+  "types": [
+    "system",
+    "core-js"
+  ],
+  "exclude": [
+    "node_modules", //<-- this would be needed in case of VS2015
+    "node_modules/@typings",
+    "typings"
+  ]
 }

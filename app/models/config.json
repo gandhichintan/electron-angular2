@@ -1,0 +1,13 @@
+{
+    "name":"default",
+    "driver":{
+        "type":"",
+        "host":"",
+        "port":"",
+        "username":"",
+        "password":"",
+        "database":""
+    },
+    "autoSchemaSync": true,
+    "entities":["${__dirname}/entity/*.js"]
+}
